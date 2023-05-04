@@ -47,8 +47,8 @@
 
         // else
         //      output please select rock, paper or scissors
-        function playRound(playerSelection, computerSelection) {
-            computerSelection = getComputerChoice();
+        function playRound(playerSelection) {
+            const computerSelection = getComputerChoice();
 
             let playerSelectionTemp = playerSelection.slice(0,1);
             playerSelectionTemp = playerSelectionTemp.toUpperCase();
@@ -84,6 +84,8 @@
                 return "Please select Rock, Paper or Scissors";
             }
         }
+
+        console.log(playRound("Rock"));
     </script>
 </body>
 </html>
