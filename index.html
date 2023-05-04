@@ -55,7 +55,34 @@
             let playerSelectionTemp2 = playerSelection.slice(1);
             playerSelectionTemp2 = playerSelectionTemp2.toLowerCase();
             playerSelection = playerSelectionTemp + playerSelectionTemp2;
-            
+
+            if (playerSelection === "Rock") {
+                if (computerSelection === "Scissors") {
+                    return "You Win! Rock beats Scissors";
+                } else if (computerSelection === "Paper") {
+                    return "You Lose. Paper beats Rock";
+                } else {
+                    return "It's a tie!";
+                }
+            } else if (playerSelection === "Paper") {
+                if (computerSelection === "Rock") {
+                    return "You Win! Paper beats Rock";
+                } else if (computerSelection === "Scissors") {
+                    return "You Lose. Scissors beats Paper";
+                } else {
+                    return "It's a tie!";
+                }
+            } else if (playerSelection === "Scissors") {
+                if (computerSelection === "Paper") {
+                    return "You Win! Scissors beats Paper";
+                } else if (computerSelection === "Rock") {
+                    return "You Lose. Rock beats Scissors";
+                } else {
+                    return "It's a tie!";
+                }
+            } else {
+                return "Please select Rock, Paper or Scissors";
+            }
         }
     </script>
 </body>
