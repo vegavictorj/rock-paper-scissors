@@ -8,17 +8,12 @@
 </head>
 <body>
     <script>
-        // name the function
-        // create an array of strings containing [Rock, Paper, Scissors]
-        // create a variable for shuffle result
-        
-        // randomize a number between 1 and 10
-
-        // create an algorithm that shuffles through the array of strings and returns only one string
-        // loop through the array number of times
-        // assign last iteration to shuffle result
-
-        // return shuffle result(string)
+        function getComputerChoice() {
+            const play = ["Rock", "Paper", "Scissors"];
+            let randomNumber = Math.floor(Math.random() * 3);
+            let shuffleResult = play[randomNumber];
+            return shuffleResult;
+        }
     </script>
 </body>
 </html>
