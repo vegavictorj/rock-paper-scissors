@@ -15,6 +15,7 @@
             return shuffleResult;
         }
 
+        // name function and assign parameters
         // assign getComputerChoice() to computerSelection
 
         // upperCase first letter of playerSelection and lowerCase the rest
@@ -46,6 +47,16 @@
 
         // else
         //      output please select rock, paper or scissors
+        function playRound(playerSelection, computerSelection) {
+            computerSelection = getComputerChoice();
+
+            let playerSelectionTemp = playerSelection.slice(0,1);
+            playerSelectionTemp = playerSelectionTemp.toUpperCase();
+            let playerSelectionTemp2 = playerSelection.slice(1);
+            playerSelectionTemp2 = playerSelectionTemp2.toLowerCase();
+            playerSelection = playerSelectionTemp + playerSelectionTemp2;
+            
+        }
     </script>
 </body>
 </html>
