@@ -15,9 +15,10 @@
             return shuffleResult;
         }
 
-        function playRound(playerSelection) {
+        function playRound() {
             const computerSelection = getComputerChoice();
 
+            let playerSelection = prompt("Rock, Paper or Scissors?");
             let playerSelectionTemp = playerSelection.slice(0,1);
             playerSelectionTemp = playerSelectionTemp.toUpperCase();
             let playerSelectionTemp2 = playerSelection.slice(1);
@@ -57,7 +58,6 @@
         // create variable for Wins
         // create variable for Loses
         // call playRound() 5 times
-        // each time, prompt user for choice --> add to playRound()
         // each time, add W or L (keep score)
         // return score and winner or loser
 
