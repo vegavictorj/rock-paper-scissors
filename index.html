@@ -76,40 +76,96 @@
         // else if tempScore === "You Lose. Rock beats Scissors"
         //      loses++
         // else
-        //      draw++
+        //      draws++
 
-        // if wins > 2
-        //      return Aye! That's a W!
-        // if loses > 2
-        //      return Ouff, we lost this one. We'll get them next time.
-        // if draws > 2
-        //      playRound() (tie breaker)
+        // if wins = 0
+        //      if draws = 5
+        //          tieBreaker()
+        //      else
+        //          lost game
+        // if loses = 0
+        //      if draws = 5
+        //          tieBreaker()
+        //      else
+        //          win game
+        // if draws = 0
+        //      if loses = 5
+        //          lost game
+        //      else if wins > 2
+        //          win game
+        //      else
+        //          lost game
 
-        // wins:    0   0   0   0   0   0   |   0   1   2   3   4   5   |   0   1   2   3   4   5
-        // loses:   0   1   2   3   4   5   |   0   0   0   0   0   0   |   5   4   3   2   1   0
-        // draws:   5   4   3   2   1   0   |   5   4   3   2   1   0   |   0   0   0   0   0   0
+        // if wins = 1
+        //      if draws = 3
+        //          tieBreaker()
+        //      else
+        //          lost game
+        // if loses = 1
+        //      if draws = 4
+        //          lost game
+        //      else if draws = 3
+        //          tieBreaker()
+        //      else
+        //          win game
+        // if draws = 1
+        //      if wins = 2
+        //          tieBreaker()
+        //      else if wins > 2
+        //          win game
+        //      else
+        //          lost game
 
-        // wins:    1   1   1   1   1   |   0   1   2   3   4   |   0   1   2   3   4
-        // loses:   0   1   2   3   4   |   1   1   1   1   1   |   4   3   2   1   0
-        // draws:   4   3   2   1   0   |   4   3   2   1   0   |   1   1   1   1   1
+        // if wins = 2
+        //      if loses = 2
+        //          tieBreaker()
+        //      else if loses > 2
+        //          lost game
+        //      else
+        //          win game
+        // if loses = 2
+        //      if wins = 2
+        //          tieBreaker()
+        //      else if wins > 2
+        //          win game
+        //      else
+        //          lost game
+        // if draws = 2
+        //      if wins > 1
+        //          win game
+        //      else
+        //          lost game
 
-        // wins:    2   2   2   2   |   0   1   2   3   |   0   1   2   3
-        // loses:   0   1   2   3   |   2   2   2   2   |   3   2   1   0
-        // draws:   3   2   1   0   |   3   2   1   0   |   2   2   2   2
+        // if wins = 3
+        //      win game
+        // if loses = 3
+        //      lost game
+        // if draws = 3
+        //      if wins = 1
+        //          tieBreaker()
+        //      else if wins > 1
+        //          win game
+        //      else
+        //          lost game
 
-        // wins:    3   3   3   |   0   1   2   |   0   1   2
-        // loses:   0   1   2   |   3   3   3   |   2   1   0
-        // draws:   2   1   0   |   2   1   0   |   3   3   3
+        // if wins = 4
+        //      win game
+        // if loses = 4
+        //      lost game
+        // if draws = 4
+        //      if wins = 1
+        //          win game
+        //      else
+        //          lost game
 
-        // wins:    4   4   |   0   1   |   0   1
-        // loses:   0   1   |   4   4   |   1   0
-        // draws:   1   0   |   1   0   |   4   4
+        // if wins = 5
+        //      win game
+        // if loses = 5
+        //      lost game
+        // if draws = 5
+        //      tieBreaker()
 
-        // wins:    5   |   0   |   0
-        // loses:   0   |   5   |   0
-        // draws:   0   |   0   |   5
-
-        // return score and winner or loser or draw
+        // return score and winner or loser
     </script>
 </body>
 </html>
