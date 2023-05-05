@@ -77,7 +77,38 @@
         //      loses++
         // else
         //      draw++
-        
+
+        // if wins > 2
+        //      return Aye! That's a W!
+        // if loses > 2
+        //      return Ouff, we lost this one. We'll get them next time.
+        // if draws > 2
+        //      playRound() (tie breaker)
+
+        // wins:    0   0   0   0   0   0   |   0   1   2   3   4   5   |   0   1   2   3   4   5
+        // loses:   0   1   2   3   4   5   |   0   0   0   0   0   0   |   5   4   3   2   1   0
+        // draws:   5   4   3   2   1   0   |   5   4   3   2   1   0   |   0   0   0   0   0   0
+
+        // wins:    1   1   1   1   1   |   0   1   2   3   4   |   0   1   2   3   4
+        // loses:   0   1   2   3   4   |   1   1   1   1   1   |   4   3   2   1   0
+        // draws:   4   3   2   1   0   |   4   3   2   1   0   |   1   1   1   1   1
+
+        // wins:    2   2   2   2   |   0   1   2   3   |   0   1   2   3
+        // loses:   0   1   2   3   |   2   2   2   2   |   3   2   1   0
+        // draws:   3   2   1   0   |   3   2   1   0   |   2   2   2   2
+
+        // wins:    3   3   3   |   0   1   2   |   0   1   2
+        // loses:   0   1   2   |   3   3   3   |   2   1   0
+        // draws:   2   1   0   |   2   1   0   |   3   3   3
+
+        // wins:    4   4   |   0   1   |   0   1
+        // loses:   0   1   |   4   4   |   1   0
+        // draws:   1   0   |   1   0   |   4   4
+
+        // wins:    5   |   0   |   0
+        // loses:   0   |   5   |   0
+        // draws:   0   |   0   |   5
+
         // return score and winner or loser or draw
     </script>
 </body>
