@@ -78,86 +78,31 @@
         // else
         //      draws++
 
-        // if wins = 0
-        //      if draws = 5
-        //          tieBreaker()
-        //      else
-        //          lost game
-        // if loses = 0
-        //      if draws = 5
-        //          tieBreaker()
-        //      else
-        //          win game
-        // if draws = 0
-        //      if loses = 5
-        //          lost game
-        //      else if wins > 2
-        //          win game
-        //      else
-        //          lost game
-
-        // if wins = 1
-        //      if draws = 3
-        //          tieBreaker()
-        //      else
-        //          lost game
-        // if loses = 1
-        //      if draws = 4
-        //          lost game
-        //      else if draws = 3
-        //          tieBreaker()
-        //      else
-        //          win game
-        // if draws = 1
-        //      if wins = 2
-        //          tieBreaker()
-        //      else if wins > 2
-        //          win game
-        //      else
-        //          lost game
-
-        // if wins = 2
-        //      if loses = 2
-        //          tieBreaker()
-        //      else if loses > 2
-        //          lost game
-        //      else
-        //          win game
-        // if loses = 2
-        //      if wins = 2
-        //          tieBreaker()
-        //      else if wins > 2
-        //          win game
-        //      else
-        //          lost game
-        // if draws = 2
-        //      if wins > 1
-        //          win game
-        //      else
-        //          lost game
-
-        // if draws = 3
-        //      if wins = 1
-        //          tieBreaker()
-        //      else if wins > 1
-        //          win game
-        //      else
-        //          lost game
-
-        // if draws = 4
-        //      if wins = 1
-        //          win game
-        //      else
-        //          lost game
-
-        // if draws = 5
-        //      tieBreaker()
-
         // SIMPLIFIED CONDITIONS
         // if wins >= 3
         //      win game
-        // if loses >= 3
+        // else if loses >= 3
         //      lost game
+        // else if draws = 5 or draws = 1
+        //      tieBreaker()
+        // else if draws = 3
+        //      if wins = 1
+        //          tieBreaker()
+        //      else if wins = 0
+        //          lost game
+        //      else
+        //          win game
+        // else if draws = 4
+        //      if wins = 1
+        //          win game
+        //      else
+        //          lost game
+        // else if draws = 2
+        //      if wins = 2
+        //          win game
+        //      else
+        //          lost game
+
 
         // return score and winner or loser
     </script>
