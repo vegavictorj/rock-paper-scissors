@@ -62,6 +62,50 @@
         // else
         //      tieBreaker()
         
+        function game() {
+            let wins;
+            let losses;
+            let draws;
+
+            for (i = 0; i < 5; i++) {
+                let tempScore = playRound();
+                if (tempScore.slice(0,7) === "You Win") {
+                    wins++;
+                } else if (tempScore.slice(0,8) === "You Lose") {
+                    losses++;
+                } else {
+                    draws++;
+                }
+            }
+
+            if (wins >= 3) {
+                return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+            } else if (losses >= 3) {
+                return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+            } else if (draws === 5 || draws === 1) {
+                return `It's a draw. You'll get them next game!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+            } else if (draws === 3) {
+                if (wins === 1) {
+                    return `It's a draw. You'll get them next game!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+                } else if (wins === 0) {
+                    return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+                } else {
+                    return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+                }
+            } else if (draws === 4) {
+                if (wins === 1) {
+                    return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+                } else {
+                    return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+                }
+            } else if (draws === 2) {
+                if (wins === 2) {
+                    return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+                } else {
+                    return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
+                }
+            }
+        }
         // game()
         // create variable for wins
         // create variable for loses
