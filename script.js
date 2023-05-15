@@ -8,6 +8,13 @@ function getComputerChoice() {
 function playRound() {
     const computerSelection = getComputerChoice();
 
+    let playerSelection = prompt("Rock, Paper or Scissors?");
+    let playerSelectionTemp = playerSelection.slice(0,1);
+    playerSelectionTemp = playerSelectionTemp.toUpperCase();
+    let playerSelectionTemp2 = playerSelection.slice(1);
+    playerSelectionTemp2 = playerSelectionTemp2.toLowerCase();
+    playerSelection = playerSelectionTemp + playerSelectionTemp2;
+
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
             return "You Win! Rock beats Scissors";
