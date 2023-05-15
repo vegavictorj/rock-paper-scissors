@@ -67,17 +67,6 @@
             let losses = 0;
             let draws = 0;
 
-            for (i = 0; i < 5; i++) {
-                let tempScore = playRound();
-                if (tempScore.slice(0,7) === "You Win") {
-                    wins++;
-                } else if (tempScore.slice(0,8) === "You Lose") {
-                    losses++;
-                } else {
-                    draws++;
-                }
-            }
-
             if (wins >= 3) {
                 return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
             } else if (losses >= 3) {
