@@ -75,3 +75,8 @@ function game() {
         }
     }
 }
+
+// each time the player clicks a button, there is a function call to playRound()
+// add eventListener of click to buttons
+const buttons = document.querySelectorAll("button");
+buttons.addEventListener("click", playRound);
