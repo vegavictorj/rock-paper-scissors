@@ -6,14 +6,8 @@ function getComputerChoice() {
 }
 
 function playRound() {
-    const computerSelection = getComputerChoice();
-
-    let playerSelection = prompt("Rock, Paper or Scissors?");
-    let playerSelectionTemp = playerSelection.slice(0,1);
-    playerSelectionTemp = playerSelectionTemp.toUpperCase();
-    let playerSelectionTemp2 = playerSelection.slice(1);
-    playerSelectionTemp2 = playerSelectionTemp2.toLowerCase();
-    playerSelection = playerSelectionTemp + playerSelectionTemp2;
+    const computerSelection = getComputerChoice;
+    const playerSelection = getPlayerChoice;
 
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
@@ -75,3 +69,22 @@ function game() {
         }
     }
 }
+// function getPlayerChoice() {
+//     const buttons = document.querySelectorAll("button");
+//     buttons.forEach((button) => {
+//         button.addEventListener("click", (e) => {
+//             return button.textContent;
+//         });
+//     });
+// }
+
+// console.log(getPlayerChoice);
+
+
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        console.log(button.textContent);
+    });
+});
