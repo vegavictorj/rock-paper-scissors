@@ -5,9 +5,16 @@ function getComputerChoice() {
     return shuffleResult;
 }
 
+// function getPlayerChoice()??
+// create variable for player choice
+// select buttons container
+// add eventListener "click" to container
+//      assign textContent of clicked button to playerChoice
+// return playerChoice
+
 function playRound() {
     const computerSelection = getComputerChoice;
-    const playerSelection = getPlayerChoice;
+    // const playerSelection = getPlayerChoice;??
 
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
@@ -41,50 +48,7 @@ function game() {
     let losses = 0;
     let draws = 0;
 
-    if (wins >= 3) {
-        return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-    } else if (losses >= 3) {
-        return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-    } else if (draws === 5 || draws === 1) {
-        return `It's a draw. You'll get them next game!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-    } else if (draws === 3) {
-        if (wins === 1) {
-            return `It's a draw. You'll get them next game!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-        } else if (wins === 0) {
-            return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-        } else {
-            return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-        }
-    } else if (draws === 4) {
-        if (wins === 1) {
-            return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-        } else {
-            return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-        }
-    } else if (draws === 2) {
-        if (wins === 2) {
-            return `Congrats! You won!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-        } else {
-            return `You'll get them next time!\nFinal score: W-${wins} L-${losses} D-${draws}`;
-        }
-    }
+    // select buttons container
+    // add eventListener "click" to container
+    //      call playRound function
 }
-// function getPlayerChoice() {
-//     const buttons = document.querySelectorAll("button");
-//     buttons.forEach((button) => {
-//         button.addEventListener("click", (e) => {
-//             return button.textContent;
-//         });
-//     });
-// }
-
-// console.log(getPlayerChoice);
-
-
-
-const buttons = document.querySelectorAll("button");
-buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        console.log(button.textContent);
-    });
-});
