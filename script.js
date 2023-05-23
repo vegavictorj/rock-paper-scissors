@@ -22,7 +22,7 @@ function getPlayerChoice() {
 
 function playRound() {
     const computerSelection = getComputerChoice;
-    // const playerSelection = getPlayerChoice;??
+    const playerSelection = getPlayerChoice;
 
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
