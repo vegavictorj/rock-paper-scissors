@@ -5,10 +5,7 @@ function getComputerChoice() {
     return shuffleResult;
 }
 
-function playRound() {
-    const computerSelection = getComputerChoice;
-    const playerSelection = getPlayerChoice;
-
+function playRound(playerSelection, computerSelection) {
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
             return "You Win! Rock beats Scissors";
@@ -36,32 +33,9 @@ function playRound() {
     }
 }
 
-function game() {
-    let wins = 0;
-    let losses = 0;
-    let draws = 0;
-
-    // select buttons container
-    // add eventListener "click" to container
-    //      call playRound function
-    const buttons = document.querySelector(".buttons");
-    buttons.addEventListener("click", playRound);
-}
-
-
-
-// function getPlayerChoice()??
-// create variable for player choice
-// select buttons container
-// add eventListener "click" to container
-//      assign textContent of clicked button to playerChoice
-// return playerChoice
-// function getPlayerChoice() {
-//     let playerChoice;
-//     const buttons = document.querySelector(".buttons");
-//     buttons.addEventListener("click", (e) => {
-//         playerChoice = e.target.textContent;
-//         console.log(playerChoice);
-//     });
-// };
-// console.log(getPlayerChoice());
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button => button.addEventListener("click", () => {
+    const playerSelection = button.textContent;
+    const computerChoice = getComputerChoice();
+    playRound(playerSelection, computerChoice);
+}));
