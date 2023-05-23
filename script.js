@@ -11,6 +11,14 @@ function getComputerChoice() {
 // add eventListener "click" to container
 //      assign textContent of clicked button to playerChoice
 // return playerChoice
+function getPlayerChoice() {
+    let playerChoice;
+    const buttons = document.querySelector(".buttons");
+    buttons.addEventListener("click", (e) => {
+        playerChoice = e.target.textContent;
+        return playerChoice;
+    });
+};
 
 function playRound() {
     const computerSelection = getComputerChoice;
