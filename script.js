@@ -5,21 +5,6 @@ function getComputerChoice() {
     return shuffleResult;
 }
 
-// function getPlayerChoice()??
-// create variable for player choice
-// select buttons container
-// add eventListener "click" to container
-//      assign textContent of clicked button to playerChoice
-// return playerChoice
-function getPlayerChoice() {
-    let playerChoice;
-    const buttons = document.querySelector(".buttons");
-    buttons.addEventListener("click", (e) => {
-        playerChoice = e.target.textContent;
-        return playerChoice;
-    });
-};
-
 function playRound() {
     const computerSelection = getComputerChoice;
     const playerSelection = getPlayerChoice;
@@ -59,4 +44,24 @@ function game() {
     // select buttons container
     // add eventListener "click" to container
     //      call playRound function
+    const buttons = document.querySelector(".buttons");
+    buttons.addEventListener("click", playRound);
 }
+
+
+
+// function getPlayerChoice()??
+// create variable for player choice
+// select buttons container
+// add eventListener "click" to container
+//      assign textContent of clicked button to playerChoice
+// return playerChoice
+// function getPlayerChoice() {
+//     let playerChoice;
+//     const buttons = document.querySelector(".buttons");
+//     buttons.addEventListener("click", (e) => {
+//         playerChoice = e.target.textContent;
+//         console.log(playerChoice);
+//     });
+// };
+// console.log(getPlayerChoice());
