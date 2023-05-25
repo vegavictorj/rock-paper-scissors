@@ -36,14 +36,23 @@ function playRound(playerSelection, computerSelection) {
 const result = document.querySelector(".result");
 const buttons = document.querySelectorAll("button");
 // select div playerScore
+const playerScore = document.querySelector(".playerScore");
 // select div computerScore
+const computerScore = document.querySelector(".computerScore");
 // select div finalResult
+const finalResult = document.querySelector(".finalResult");
 // create variable for playerWins
+let playerWins = 0;
 // create variable for playerLosses
+let playerLosses = 0;
 // create variable for playerDraws
+let playerDraws = 0;
 // create variable for computerWins
+let computerWins = 0;
 // create variable for computerLosses
+let computerLosses = 0;
 // create variable for computerDraws
+let computerDraws = 0;
 // while playerWins < 5 || computerWins < 5
 buttons.forEach(button => button.addEventListener("click", () => {
     const playerSelection = button.textContent;
