@@ -54,10 +54,11 @@ let computerLosses = 0;
 // create variable for computerDraws
 let computerDraws = 0;
 // while playerWins < 5 || computerWins < 5
-buttons.forEach(button => button.addEventListener("click", () => {
-    const playerSelection = button.textContent;
-    const computerChoice = getComputerChoice();
-    result.textContent = playRound(playerSelection, computerChoice);
+while (playerWins < 5 || computerWins < 5) {
+    buttons.forEach(button => button.addEventListener("click", () => {
+        const playerSelection = button.textContent;
+        const computerChoice = getComputerChoice();
+        result.textContent = playRound(playerSelection, computerChoice);
     // if result.textContent.slice(0,7) === "You Win"
     //      playerWins++
     //      computerLosses++
@@ -78,4 +79,5 @@ buttons.forEach(button => button.addEventListener("click", () => {
     // finalResult.textContent = "Aye! Good job, you won!"
     // else
     // finalResult.textContent = "Ouff! we'll get them next time!"
-}));
+    }));
+}
