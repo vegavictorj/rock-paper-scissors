@@ -92,8 +92,13 @@ while (playerWins < 5 || computerWins < 5) {
     }
 
     // if playerWins === 5
+    if (playerWins === 5) {
     // finalResult.textContent = "Aye! Good job, you won!"
+        finalResult.textContent = "Aye! Good job, you won!";
     // else
+    } else {
     // finalResult.textContent = "Ouff! we'll get them next time!"
+        finalResult.textContent = "Ouff! We'll get them next time!";
+    }
     }));
 }
