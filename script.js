@@ -60,22 +60,36 @@ while (playerWins < 5 || computerWins < 5) {
         const computerChoice = getComputerChoice();
         result.textContent = playRound(playerSelection, computerChoice);
     // if result.textContent.slice(0,7) === "You Win"
+    //      playerWins++
+    //      computerLosses++
+    //      playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
+    //      computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
     if (result.textContent.slice(0,7) === "You Win") {
-        playerWins++
-        computerLosses++
-        playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
-        computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
-    }
+        playerWins++;
+        computerLosses++;
+        playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`;
+        computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`;
     // else if result.textContent.slice(0,8) === "You Lose"
     //      playerLosses++
     //      computerWins++
-    // playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
-    // computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
+    //      playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
+    //      computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
+    } else if (result.textContent.slice(0,8) === "You Lose") {
+        playerLosses++;
+        computerWins++;
+        playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`;
+        computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`;
     // else 
     //      playerDraws++
     //      computerDraws++
-    // playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
-    // computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
+    //      playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
+    //      computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
+    } else {
+        playerDraws++;
+        computerDraws++;
+        playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`;
+        computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`;
+    }
 
     // if playerWins === 5
     // finalResult.textContent = "Aye! Good job, you won!"
