@@ -1,3 +1,15 @@
+const buttons = document.querySelectorAll("button");
+const result = document.querySelector(".result");
+const playerScore = document.querySelector(".playerScore");
+const computerScore = document.querySelector(".computerScore");
+const finalResult = document.querySelector(".finalResult");
+let playerWins = 0;
+let playerLosses = 0;
+let playerDraws = 0;
+let computerWins = 0;
+let computerLosses = 0;
+let computerDraws = 0;
+
 function getComputerChoice() {
     const play = ["Rock", "Paper", "Scissors"];
     let randomNumber = Math.floor(Math.random() * 3);
@@ -33,57 +45,21 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const result = document.querySelector(".result");
-const buttons = document.querySelectorAll("button");
-// select div playerScore
-const playerScore = document.querySelector(".playerScore");
-// select div computerScore
-const computerScore = document.querySelector(".computerScore");
-// select div finalResult
-const finalResult = document.querySelector(".finalResult");
-// create variable for playerWins
-let playerWins = 0;
-// create variable for playerLosses
-let playerLosses = 0;
-// create variable for playerDraws
-let playerDraws = 0;
-// create variable for computerWins
-let computerWins = 0;
-// create variable for computerLosses
-let computerLosses = 0;
-// create variable for computerDraws
-let computerDraws = 0;
-// while playerWins < 5 || computerWins < 5
-while (playerWins < 5 || computerWins < 5) {
-    buttons.forEach(button => button.addEventListener("click", () => {
-        const playerSelection = button.textContent;
-        const computerChoice = getComputerChoice();
-        result.textContent = playRound(playerSelection, computerChoice);
-    // if result.textContent.slice(0,7) === "You Win"
-    //      playerWins++
-    //      computerLosses++
-    //      playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
-    //      computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
+buttons.forEach(button => button.addEventListener("click", () => {
+    const playerSelection = button.textContent;
+    const computerSelection = getComputerChoice();
+    result.textContent = playRound(playerSelection, computerSelection);
+
     if (result.textContent.slice(0,7) === "You Win") {
         playerWins++;
         computerLosses++;
         playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`;
         computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`;
-    // else if result.textContent.slice(0,8) === "You Lose"
-    //      playerLosses++
-    //      computerWins++
-    //      playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
-    //      computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
     } else if (result.textContent.slice(0,8) === "You Lose") {
         playerLosses++;
         computerWins++;
         playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`;
         computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`;
-    // else 
-    //      playerDraws++
-    //      computerDraws++
-    //      playerScore.textContent = `Player Score: W-${playerWins} L-${playerLosses} D-${playerDraws}`
-    //      computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`
     } else {
         playerDraws++;
         computerDraws++;
@@ -91,14 +67,21 @@ while (playerWins < 5 || computerWins < 5) {
         computerScore.textContent = `Computer Score: W-${computerWins} L-${computerLosses} D-${computerDraws}`;
     }
 
-    // if playerWins === 5
     if (playerWins === 5) {
-    // finalResult.textContent = "Aye! Good job, you won!"
         finalResult.textContent = "Aye! Good job, you won!";
-    // else
-    } else {
-    // finalResult.textContent = "Ouff! we'll get them next time!"
+        playerWins = 0;
+        playerLosses = 0;
+        playerDraws = 0;
+        computerWins = 0;
+        computerLosses = 0;
+        computerDraws = 0;
+    } else if (computerWins === 5) {
         finalResult.textContent = "Ouff! We'll get them next time!";
+        playerWins = 0;
+        playerLosses = 0;
+        playerDraws = 0;
+        computerWins = 0;
+        computerLosses = 0;
+        computerDraws = 0;
     }
-    }));
-}
+}));
