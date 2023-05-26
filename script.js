@@ -69,6 +69,7 @@ buttons.forEach(button => button.addEventListener("click", () => {
 
     if (playerWins === 5) {
         finalResult.textContent = "Aye! Good job, you won!";
+        setTimeout(() => { finalResult.textContent = ""; }, 3000);
         playerWins = 0;
         playerLosses = 0;
         playerDraws = 0;
@@ -76,7 +77,8 @@ buttons.forEach(button => button.addEventListener("click", () => {
         computerLosses = 0;
         computerDraws = 0;
     } else if (computerWins === 5) {
-        finalResult.textContent = "Ouff! We'll get them next time!";
+        finalResult.textContent = "Ouff! We'll get them next game!";
+        setTimeout(() => { finalResult.textContent = ""; }, 3000);
         playerWins = 0;
         playerLosses = 0;
         playerDraws = 0;
